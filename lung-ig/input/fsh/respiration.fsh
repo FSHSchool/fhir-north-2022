@@ -40,6 +40,10 @@ Title: "Respiration Assessment for Colin Robinson"
 
 /**************************************************************/
 
+RuleSet: SNOMEDCopyright
+* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
+* ^experimental = false
+
 RuleSet: CategorySlice(sliceName, sliceValue, minCard)
 * category {minCard}..* MS  // really should increment lower card
 * category ^slicing.discriminator.type = #pattern
@@ -49,20 +53,3 @@ RuleSet: CategorySlice(sliceName, sliceValue, minCard)
 * category contains {sliceName} {minCard}..1
 * category[{sliceName}] = {sliceValue}
 
-
-RuleSet: CreateComponent(sliceName, min, max)
-* component contains {sliceName} {min}..{max} MS
-* component[{sliceName}].code MS
-* component[{sliceName}].value[x] MS
-//* component[{sliceName}].dataAbsentReason MS
-
-
-RuleSet: ObservationComponentSlicingRules
-* component ^slicing.discriminator.type = #pattern
-* component ^slicing.discriminator.path = "code"
-* component ^slicing.rules = #open
-* component ^slicing.description = "Slice based on the component.code pattern"
-
-RuleSet: SNOMEDCopyright
-* ^copyright = "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"
-* ^experimental = false
