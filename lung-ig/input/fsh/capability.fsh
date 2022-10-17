@@ -26,6 +26,8 @@ Usage: #definition
 * insert SupportInteraction(#search-type, #SHALL)
 * insert SupportInteraction(#update, #MAY)
 
-* insert SupportSearchParam(_id, http://hl7.org/fhir/SearchParameter/Resource-id, #token, #SHALL)
-* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHALL)
-* insert SupportSearchParam(name, http://hl7.org/fhir/SearchParameter/Location-name, #string, #SHALL)
+* insert SupportSearchParam(_subject, http://hl7.org/fhir/SearchParameter/Observation-subject, #string, #SHALL)
+* insert SupportSearchParam(_code, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
+// Should be search on Effective Time?
+* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHOULD)
+
