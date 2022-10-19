@@ -29,6 +29,4 @@ Usage: #definition
 
 * insert SupportSearchParam(_subject, http://hl7.org/fhir/SearchParameter/Observation-subject, #reference, #SHALL)
 * insert SupportSearchParam(_code, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
-// Should be search on Effective Time?
-* insert SupportSearchParam(_lastUpdated, http://hl7.org/fhir/SearchParameter/Resource-lastUpdated, #date, #SHOULD)
-
+* insert SupportSearchParam(_effective, http://hl7.org/fhir/SearchParameter/Observation-clinical-date, #date, #SHOULD)

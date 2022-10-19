@@ -25,13 +25,13 @@ Description: "Result of ease of respiration observation"
 
 Instance: ColinRobinson
 InstanceOf: PatientProfile
-Description: "An example of a Canadian patient with breathing difficulty."
+Description: "An example of a Canadian patient."
 * name
   * given[0] = "Colin"
   * family = "Robinson"
 * birthDate = "1965-05-12"
 
-Instance: ColinRobinsonRespirationAssessment
+Instance: RespirationAssessment
 InstanceOf: EaseOfRespiration
 Title: "Respiration Assessment for Colin Robinson"
 * subject = Reference(ColinRobinson)
