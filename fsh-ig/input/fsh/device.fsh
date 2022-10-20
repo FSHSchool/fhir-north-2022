@@ -33,10 +33,3 @@ Description: "CPAP machine loaned to Colin Robinson"
 * extension[maintenanceEvent].extension[datePerformed].valueDate = "2022-10-26"
 * extension[maintenanceEvent].extension[currentDeviceHours].valueDecimal = 1200.0
 * extension[maintenanceEvent].extension[performer].valueString = "Lazlo Cravensworth"
-
-
-/**************************************************************/
-
-RuleSet: ExtensionContext(path)
-* ^context[+].type = #element
-* ^context[=].expression = "{path}"
