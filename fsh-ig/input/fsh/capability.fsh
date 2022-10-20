@@ -6,12 +6,11 @@
 // SHALL search by patient and code
 // SHOULD search by time
 
-Instance: LungCapabilityStatement
+Instance: FSHCapabilityStatement
 InstanceOf: CapabilityStatement
-Title: "Lung IG Capability Statement"
+Title: "FHIR Shorthand IG Capability Statement"
 Usage: #definition
-// * name = "Capability Statement for Lung IG"
-* description = "CapabilityStatement describing requirements for implementing the Lung IG"
+* description = "CapabilityStatement describing requirements for implementing the FSH IG"
 * rest.mode = #server
 * status = #draft
 * date = "2022-10-26"
@@ -21,7 +20,7 @@ Usage: #definition
 
 // Observation
 * insert SupportResource(Observation, #SHALL)
-* insert SupportProfile(http://example.org/fhir-lung/StructureDefinition/ease-of-respiration, #SHALL)
+* insert SupportProfile(http://fhir-north.org/fsh-ig/StructureDefinition/ease-of-respiration, #SHALL)
 
 * insert SupportInteraction(#read, #SHALL)
 * insert SupportInteraction(#search-type, #SHALL)
@@ -30,3 +29,6 @@ Usage: #definition
 * insert SupportSearchParam(_subject, http://hl7.org/fhir/SearchParameter/Observation-subject, #reference, #SHALL)
 * insert SupportSearchParam(_code, http://hl7.org/fhir/SearchParameter/Observation-value-concept, #token, #SHALL)
 * insert SupportSearchParam(_effective, http://hl7.org/fhir/SearchParameter/clinical-date, #date, #SHOULD)
+
+
+// 20 lines
