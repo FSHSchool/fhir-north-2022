@@ -25,17 +25,20 @@ Description: "Result of ease of respiration observation"
 
 Instance: ColinRobinson
 InstanceOf: PatientProfile
+Title: "Colin Robinson"
 Description: "An example of a Canadian patient."
 * name
   * given[0] = "Colin"
   * family = "Robinson"
+* gender = #male
 * birthDate = "1965-05-12"
 
 Instance: RespirationAssessment
 InstanceOf: EaseOfRespiration
 Title: "Respiration Assessment for Colin Robinson"
+Description: "Respiration Assessment for Colin Robinson"
 * subject = Reference(ColinRobinson)
 * valueCodeableConcept = SCT#248549001 "Labored breathing (finding)"
+* effectiveDateTime = "2022-10-26"
 * status = #final
 
-// 32 lines
